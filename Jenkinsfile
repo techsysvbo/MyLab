@@ -28,7 +28,7 @@ pipeline{
             steps {
                 echo ' Source code published to Sonarqube for SCA......'
                 withSonarQubeEnv('sonarqube'){ // You can override the credential to be used
-                     sh 'mvn sonarqube:sonarqube'
+                     sh 'mvn sonar:sonar'
                 }
 
             }
